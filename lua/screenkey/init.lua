@@ -32,8 +32,8 @@ local keys = {
     ["<F10>"] = "󱊴",
     ["<F11>"] = "󱊵",
     ["<F12>"] = "󱊶",
-    ["CTRL"] = "Ctrl",
-    ["ALT"] = "Alt",
+    ["CTRL"] = "C",
+    ["ALT"] = "A",
     ["SUPER"] = "󰘳",
 }
 
@@ -152,11 +152,11 @@ local function transform_input(in_key)
                         key = key:lower()
                     end
                     if modifier == "C" then
-                        table.insert(transformed_keys, string.format("%s+%s", keys["CTRL"], key))
+                        table.insert(transformed_keys, string.format("%s-%s", keys["CTRL"], key))
                     elseif modifier == "A" or modifier == "M" then
-                        table.insert(transformed_keys, string.format("%s+%s", keys["ALT"], key))
+                        table.insert(transformed_keys, string.format("%s-%s", keys["ALT"], key))
                     elseif modifier == "D" then
-                        table.insert(transformed_keys, string.format("%s+%s", keys["SUPER"], key))
+                        table.insert(transformed_keys, string.format("%s-%s", keys["SUPER"], key))
                     end
                 end
             end
