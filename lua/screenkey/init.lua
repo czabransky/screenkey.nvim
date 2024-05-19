@@ -55,7 +55,7 @@ local function create_window()
         anchor = Config.options.win_opts.anchor,
         title = "Screenkey",
         title_pos = "center",
-        row = 1,
+        row = vim.o.lines - vim.o.cmdheight - Config.options.win_opts.row_adjustment,
         col = vim.o.columns - 1,
         width = Config.options.win_opts.width,
         height = Config.options.win_opts.height,
