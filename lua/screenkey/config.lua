@@ -4,11 +4,10 @@ M.defaults = {
     win_opts = {
         relative = "editor",
         anchor = "SE",
-        row_adjustment = 1,
+        row_adjustment = -1,
         width = 40,
         height = 3,
         border = "single",
-
     },
     compress_after = 3,
     clear_after = 3,
