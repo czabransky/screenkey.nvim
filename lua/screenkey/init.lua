@@ -201,7 +201,7 @@ local function compress_output()
     end
 
     -- remove old entries
-    local text = table.concat(compressed_keys, " ")
+    local text = table.concat(compressed_keys, "")
     while #text > Config.options.win_opts.width - 2 do
         local removed = table.remove(compressed_keys, 1)
         -- HACK: don't touch this, please
@@ -209,7 +209,7 @@ local function compress_output()
         for _ = 1, num_removed do
             table.remove(queued_keys, 1)
         end
-        text = table.concat(compressed_keys, " ")
+        text = table.concat(compressed_keys, "")
     end
 
     return text
